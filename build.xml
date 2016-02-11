@@ -2,7 +2,7 @@
 <!-- Ant build file -->
 
 <project basedir="" default="package" name="PreprocessDataset">
-	<property name="dirOffset" value="../"/>
+	<property name="dirOffset" value="../common_module_code"/>
 	<import file="${dirOffset}/commontargets.xml"/>
 
 	<target name="_init" depends="init">
@@ -26,7 +26,7 @@
 	</target>
 
 	<target name="compile" depends="_init">
-		<javac debug="true" defaultexcludes="true" deprecation="true" destdir="." includes="${inclds}" optimize="false" proceed="false" srcdir="src" target="${java.target}" source="${java.target}">
+		<javac debug="true" defaultexcludes="true" deprecation="true" destdir="." includes="${inclds}" optimize="false" proceed="false" srcdir="src">
 			<classpath refid="library.classpath"/>
 		</javac>
 	</target>

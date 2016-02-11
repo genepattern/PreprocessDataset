@@ -130,7 +130,7 @@ p14_value=
 
 pipelineModel=
 privacy=public
-quality=preproduction
+quality=production
 requiredPatchLSIDs=
 requiredPatchURLs=
 serializedModel=

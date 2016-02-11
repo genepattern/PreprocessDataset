@@ -122,6 +122,7 @@ public class Preprocess {
                     if (columnsAboveThreshold <= 0) {
                         AnalysisUtil.exit("Number of columns above threshold must be > 0");
                     }
+                    break;
                 case 'b':
                     try {
                         remColThreshold = Double.parseDouble(args[++i]);
@@ -130,6 +131,7 @@ public class Preprocess {
                        AnalysisUtil.exit("Minimum threshold is not a number");
 
                     }
+                    break;
 				case 'V':
 					filterFlag = Integer.parseInt(args[++i]);
 					if(filterFlag != 0 && filterFlag != 1) {

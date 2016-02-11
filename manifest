@@ -4,7 +4,7 @@
 JVMLevel=1.6
 LSID=urn\:lsid\:broad.mit.edu\:cancer.software.genepattern.module.analysis\:00020\:3
 author=Joshua Gould, Broad Institute
-commandLine=<java> <java_flags> -cp <libdir>Preprocess.jar<path.separator><libdir>broad-cg.jar<path.separator><libdir>trove.jar<path.separator><libdir>Jama-1.0.1.jar<path.separator><libdir>gp-modules.jar edu.mit.broad.modules.preprocess.Preprocess -F <input.filename> -r <output.file.format> -V <threshold.and.filter> -n <row.normalization> -f <min.fold.change> -d <min.delta> -t <floor> -c <ceiling> -p <row.sampling.rate> -e <num.outliers.to.exclude> -O <output.file> -g <log2.transform>
+commandLine=<java> <java_flags> -cp <libdir>Preprocess.jar<path.separator><libdir>broad-cg.jar<path.separator><libdir>trove.jar<path.separator><libdir>Jama-1.0.1.jar<path.separator><libdir>gp-modules.jar edu.mit.broad.modules.preprocess.Preprocess -F <input.filename> -r <output.file.format> -V <threshold.and.filter> -n <row.normalization> -f <min.fold.change> -d <min.delta> -t <floor> -c <ceiling> -p <row.sampling.rate> -e <num.outliers.to.exclude> -O <output.file> -g <log2.transform> <threshold.for.removing.rows> <number.of.columns.above.threshold>
 cpuType=any
 taskDoc=doc.html
 description=Performs several preprocessing steps on a res, gct, or odf input file
@@ -92,7 +92,7 @@ p10_default_value=
 p10_description=Threshold for removing rows
 p10_name=threshold.for.removing.rows
 p10_optional=on
-p10_prefix_when_specified=-b
+p10_prefix_when_specified=-b 
 p10_type=java.lang.Float
 p10_value=
 
@@ -100,7 +100,7 @@ p11_default_value=
 p11_description=Remove row if this number of columns not >\= given threshold
 p11_name=number.of.columns.above.threshold
 p11_optional=on
-p11_prefix_when_specified=-a
+p11_prefix_when_specified=-a 
 p11_type=java.lang.Integer
 p11_value=
 
@@ -136,4 +136,4 @@ requiredPatchURLs=
 serializedModel=
 taskType=Preprocess & Utilities
 userid=GenePattern (gp-help@broad.mit.edu)
-version=convert over to html doc
+version=Bug fix for optional 'threshold.for.removing.rows' and 'number.of.columns.above.threshold' module params

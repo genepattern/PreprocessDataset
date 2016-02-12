@@ -97,7 +97,7 @@ p10_type=java.lang.Float
 p10_value=
 
 p11_default_value=
-p11_description=Remove row if this number of columns not >\= given threshold
+p11_description=Remove row if fewer than this number of columns >\= given threshold
 p11_name=number.of.columns.above.threshold
 p11_optional=on
 p11_prefix_when_specified=-a 

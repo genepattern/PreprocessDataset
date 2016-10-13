@@ -1,0 +1,25 @@
+name: PreprocessDataset - Defaults with Example Data
+description: runs PreprocessDataset with all_aml_test data
+module: PreprocessDataset
+params:
+    input.filename: "ftp://gpftp.broadinstitute.org/pub/genepattern/datasets/all_aml/all_aml_test.gct"
+    threshold.and.filter: "1"
+    floor: "20"
+    ceiling: "20000"
+    min.fold.change: "3"
+    min.delta: "100"
+    num.outliers.to.exclude: "0"
+    row.normalization: "0"
+    row.sampling.rate: "1"
+    log2.transform: "0"
+    output.file.format: "3"
+#assertions:
+#    outputDir: expected
+# these assertions are here for illustration
+# they are redundant because of the outputDir assertion
+#    numFiles: 1
+#    files: 
+#        "all_aml_test.preprocessed.gct":
+#            diff: "expected/all_aml_test.preprocessed.gct"
+#            numRows: 5951
+#            numCols: 35

@@ -2,7 +2,7 @@ name: PreprocessDataset - Defaults with Example Data
 description: runs PreprocessDataset with all_aml_test data
 module: PreprocessDataset
 params:
-    input.filename: "ftp://gpftp.broadinstitute.org/pub/genepattern/datasets/all_aml/all_aml_test.gct"
+    input.filename: "https://datasets.genepattern.org/gpftp/pub/genepattern/datasets/all_aml/all_aml_test.gct"
     threshold.and.filter: "1"
     floor: "20"
     ceiling: "20000"
